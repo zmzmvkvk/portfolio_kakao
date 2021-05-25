@@ -1,0 +1,255 @@
+@charset "utf-8";
+/* reset */
+body {margin: 0;}
+h1,h2,h3,h4,h5,h6,ul,ol,p,dl,dt,dd {  margin: 0;  padding: 0;}
+h1,h2,h3,h4,h5,h6 {  font-weight: 700;}
+a {  color: inherit;  text-decoration: inherit;}
+li {  list-style: none;}
+img {  vertical-align: middle;}
+address,em,i,cite {  font-style: normal;}
+i[class^='fa'] {  position: relative;  display: inline-block;  vertical-align: middle;  overflow: hidden;}
+i[class^='fa'] span {  position: absolute;  left: -9999px;}
+.ir-hidden {  position: absolute;  left: -9999px;}
+br.only-m {  content: '';}
+br.only-m::after {  content: '\00a0';}
+#skip-nav { position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0, 0, 0, 0.7); color: #ffffff; font-size: 16px; transition: top 0.3s; z-index: 100000;}
+#skip-nav:focus {top: 0;}
+.wrapper {overflow: hidden;}
+#header {z-index: 1000;}
+#main {z-index: 100;}
+.pc {display: block;}
+body {font-family: 'Open Sans', sans-serif; font-size: 14px; font-weight: 400; color: #000000; background: white;}
+/* z-index */
+#gnb {z-index: 1000;} #header{ z-index: 1000;}
+/* login */
+body.main {background-image: url("../img/business_2x.png"); background-size: 1500px; background-position: top; position: relative; height: 100vh;}
+body.main header h1{position: absolute; top: 12px; left: 20px;}
+body.main header h1 img{width: 178px; height: 30px;}
+body.main main {position: absolute; width: 520px; height: 610px; top: 50%; left: 50%; transform: translate(-50% , -50%); padding: 60px 70px ; box-sizing: border-box;}
+body.main main h2 img {width: 270px; height: 93px;}
+body.main main section {color: white;}
+body.main main input:first-of-type {margin-top: 30px;}
+body.main main input{color: white; font-size: 1rem; caret-color: #FEE500; line-height: 25px; border: none; border-bottom: 2px solid #6C7083;}
+body.main main input:focus{outline: none; border-bottom: 2px solid white;}
+body.main main input:focus + p{display: block;}
+body.main main input[type^="text"] {width: 100%; height: 50px ; background-color: transparent;}
+body.main main input[type^="password"] {width: 100%; height: 50px ; background-color: transparent;}
+body.main main input::placeholder {color: white; font-size: 1rem;}
+body.main main section p{display: none; font-size: 0.8rem; letter-spacing: -0.5px; margin-top: 10px;}
+body.main main section p span {font-weight: 700;}
+body.main main section div.loginStatus > * {display: block; width: 100%; text-align: center;}
+body.main main section div.loginStatus a:nth-child(1){display: block; line-height: 70px; position: relative; text-align: left;}
+body.main main section div.loginStatus a:nth-child(1) i { border: 1px solid white; margin-right: 10px; border-radius: 100px; width: 20px; height: 20px; line-height: 20px; text-align: center;}
+body.main main section div.loginStatus a:nth-child(1).on i{border: none; background-color: #FEE500; color: white;}
+body.main main section div.loginStatus a:nth-child(2){ height: 50px; background-color: #FEE500; border-radius: 4px; line-height: 50px; color: black; font-size: 1rem;}
+body.main main section div.loginStatus span::before{content: ""; position: absolute; border-bottom: 1px solid #6C7083; width: 45%; height: 1px;left: 0; margin-top: 8px;}
+body.main main section div.loginStatus span{position: relative; font-size: 0.7rem; color: #D3D3DA; margin-top: 15px;}
+body.main main section div.loginStatus span::after{content: ""; position: absolute; border-bottom: 1px solid #6C7083; width: 45%; height: 1px; right: 0; margin-top: 8px;}
+body.main main section div.loginStatus a:last-of-type{ height: 50px; background-color: white; border-radius: 4px; color: black; margin-top: 17px; font-size: 1rem; line-height: 50px;}
+body.main main section div.loginStatus a:last-of-type > i {margin-right: 10px;}
+body.main main section div.loginStatus + * {margin-top: 30px; font-size: 0.8rem;}
+body.main main section a.new {position: relative; float: left;}
+body.main main section div.account {position: absolute; right: 70px; margin-top: 30px; font-size: 0.8rem;}
+body.main main section div.account a:last-child::before { content: "| ";}
+
+/* Dash Board */
+body.sub header { position: fixed; height: 73px; background-color: white; border-bottom: 1px solid #dddddd; background-color: white; width: 100%;}
+body.sub header div.left h1 {position:absolute; height: 73px; width: 290px;}
+body.sub header div.left h1 img {position:absolute; height: 30px; width: 230px; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+body.sub header div.left > p {position: absolute; top: 50%; left: 300px; transform: translate(0,-50%); color: #6C7083;}
+body.sub header div.left > p:hover {text-decoration: underline;}
+body.sub header div.right {position: absolute; right: 0; width: 260px ; height: 30px; top: 50%; transform: translate(0,-50%); margin-right: 20px;}
+body.sub header div.right > * {float: left; line-height: 30px;}
+body.sub header div.right > a:nth-child(1) {font-size: 1.6rem; margin-right: 30px;}
+body.sub header div.right a.email {font-size: 0.8rem;}
+body.sub header div.right a.email > i {margin-left: 7px;}
+body.sub header div.right a.menu {position:absolute; font-size: 1.6rem; right: 0; top: -1px;}
+body.sub header div.right ul > li > ul {display: none;}
+
+
+
+::-webkit-scrollbar {display: none;}
+body.sub section#gnb {position: fixed; width: 220px; top: 73px; height: calc(100vh - 73px); overflow: auto; background-color: #fcfcfc; border-right: 1px solid #dddddd;}
+body.sub #gnb #myStatus {position: relative; border-bottom: 1px solid #EEEEEE; height: 250px; background-color: white;}
+body.sub #gnb #myStatus a img {position: absolute; width: 60px; height: 60px; top: 25%; left: 50%; transform: translate(-50%,-50%);}
+body.sub #gnb #myStatus h3 {position: absolute; top: 45%; left: 50%; font-size: 1.1rem; font-weight: 400; transform: translate(-50%,-50%);}
+body.sub #gnb #myStatus p {position: absolute; top: 53%; left: 50%; font-size: 0.7rem; font-weight: 500; color: #6C7083; transform: translate(-50%,-50%); letter-spacing: 1px;}
+body.sub #gnb #myStatus p > i {color: black;}
+body.sub #gnb #myStatus ul {position: absolute; height: 96px; bottom: 0; margin: 0 25px 0 25px; border-top: 1px solid #eeeeee; width: calc(100% - 50px); padding: 14px 0 14px 0; box-sizing: border-box;}
+body.sub #gnb #myStatus ul > li {height: 23px; color: #888888; font-size: 0.8rem; width: 105%; margin-left: -7px; padding-left: 7px;}
+body.sub #gnb #myStatus ul > li:hover {background-color: #F1f1f1 ;}
+body.sub #gnb #myStatus ul > li span { position: absolute; color: #444444; right: 10px;}
+body.sub #gnb #myStatus ul > li span i {color: red; font-size: .7rem;}
+body.sub #gnb #myStatus ul > li span i::after {content: ">"; position: absolute; color: #888888; right: -15px;}
+body.sub #gnb #myStatus ul > li:first-child span i {display: inline-block; border: 1px solid #D6D6D6 ; width: 6px; height: 6px; border-radius: 100px; background-color: #d6d6d6; margin-right: 3px;}
+body.sub #gnb #myStatus ul > li:first-child span i::after {display: none;}
+body.sub section#gnb nav ul li {width: 100%; height: 46px; color: #444444;}
+body.sub section#gnb nav ul:first-child li:first-child {margin-top: 10px;}
+body.sub section#gnb nav ul li a {display: block; width: 100%; padding: 10px 25px 10px 25px; box-sizing: border-box; font-size: 1rem; font-weight: 400;}
+body.sub section#gnb nav ul li a:hover {background-color: #F1F1F1 ;}
+body.sub section#gnb nav ul:first-child li:first-child a { font-weight: 500;}
+body.sub section#gnb nav ul li > a > i {position: absolute; right: 25px; font-size: 0.8rem; color: #D6D6D6}
+body.sub section#gnb nav > ul > li > ul > li{display: none;}
+
+
+body.sub #main {position: relative; background-color: #F0F1F2; height: calc(100vh - 74px); margin-top: 74px; overflow: scroll;}
+body.sub main#main .wrapper {position: absolute; overflow: scroll; height: 100%; box-sizing: border-box; width: 1060px; left: calc(42% + 220px); transform: translate(-50%,0); padding-top: 30px; padding-bottom: 30px;}
+body.sub main#main .wrapper .col-l {position: absolute; left: 30px; width: 578px;}
+body.sub main#main .wrapper .col-l section {margin-right: 20px;}
+body.sub main#main .wrapper .col-l section a img {position: absolute; top: 15px; right: 15px; width: 210px;}
+body.sub main#main .wrapper .col-l section:nth-child(1) {height: 407px;}
+body.sub h2.colTitle {font-size: 1.2rem; font-weight: 400;}
+body.sub .business > p {font-size: 0.8rem; font-weight: 400;}
+body.sub main#main .wrapper .col-l .business div.image-slide { border: 1px solid rgba(0,0,0,0.05) ; height: 233px; width: 100%; margin-top: 25px; overflow: hidden;}
+body.sub main#main .wrapper .col-l .business div.image-slide ul.slide {position: relative; width: 100%; height: 100%; box-sizing: border-box;}
+body.sub main#main .wrapper .col-l .business div.image-slide ul.slide li {position: absolute; width: 100%; height: 100%; box-sizing: border-box; background-color: #F9F9F9;}
+body.sub .business li .content {padding: 25px 35px 0 22px;}
+body.sub .business li .content h3 {color: #222222; font-size: 0.8rem; font-weight: 400; margin-top: 20px;}
+body.sub .business li .content h4 {font-size: 1.2rem; font-weight: 600; line-height: 1.5rem; margin-top: 5px;}
+body.sub .business li .content p {color: #6C7083; font-size: 0.8rem; font-weight: 400; margin-top: 10px;}
+body.sub .business li .content a {display: block; color: #222222; font-size: 0.8rem; font-weight: 400; margin-top: 20px; text-decoration: underline;}
+body.sub .business a.apply {position: absolute; left: 30px; display: block; width: 110px; height: 36px; line-height: 36px; text-align: center; background-color: rgb(255,223,44); border-radius: 3px; border: 1px solid rgba(0,0,0,0.05); margin-top: 15px; transition: all .3s;}
+body.sub .business a.apply:hover {background-color: #e9cc28;}
+body.sub .business p.num {position: absolute; right: 80px; margin-top: 17px; font-size: 0.8rem; color: #888888;}
+body.sub .business p.control {position: absolute; right: 28px; margin-top: 15px;}
+body.sub .business p.control a {width: 100%; height: 100%;}
+body.sub .business p.control a i{float: left; font-size: 0.8rem; border: 1px solid rgb(216,216,216); color: #555555; width: 20px; height: 20px; text-align: center; line-height: 20px;}
+body.sub .business p.control a:nth-of-type(2) i {border-left: none;}
+body.sub main#main .wrapper .col-l section:nth-child(2) {margin-top: 20px; height: 379px;}
+body.sub main#main .wrapper .col-r {position: absolute; right: 30px; width: 417px;}
+body.sub main#main .wrapper .col-r section {height: 1290px; margin-bottom: 30px;}
+body.sub main#main .wrapper section {position: relative; background-color: #FFFFFF; border-radius: 10px; padding: 30px; box-sizing: border-box;}
+
+.sub #main .success div{margin-top: 20px;}
+.sub #main .success div ul li {height: 20px;}
+.sub #main .success div ul li + li {margin-top: 20px;}
+.sub #main .success div ul li h4{color: #6C7083; float: left; width: 90px; font-weight: 400;}
+.sub #main .success div ul li p {color: #555555;}
+.sub #main span.dataValue {color: #2DADBC; font-weight: 300; font-size: 0.8rem;}
+.sub #main div.col-r ul:first-child > li{ border-bottom: 1px solid rgba(0,0,0,.05); padding-bottom: 30px;}
+.sub #main div.col-r ul:first-child > li + li {margin-top: 30px;}
+.sub #main div.col-r ul:first-child > li.notice-1 h2 {margin-bottom: 20px;}
+.sub #main div.col-r ul:first-child > li.notice-1 a:first-child{display: inline-block; font-size: 0.98em; width: 240px; overflow: hidden; text-overflow: ellipsis; line-height: 30px; white-space: nowrap; color: #555555;}
+.sub #main div.col-r ul:first-child > li.notice-1 a:last-child{position:absolute; right: 30px; font-size: 0.8rem; color: #6C7083;}
+.sub #main div.friendsNumber {position: relative; border: 1px solid rgba(0, 0, 0, 0.05); margin-top: 20px;}
+.sub #main div.friendsNumber > a{ float: left; width: 50%; box-sizing: border-box; border-bottom: 1px solid rgba(0, 0, 0, 0.05); line-height: 40px; text-align: center; background-color: rgb(249,249,250); color: rgb(136,136,136);}
+.sub #main div.friendsNumber > a:last-of-type{border-left: 1px solid rgba(0, 0, 0, 0.05);}
+.sub #main div.friendsNumber > a.on {border-bottom: none; background-color: white; color: rgb(34,34,34);}
+.sub #main div.friendsNumber p { display: none; color: #555555;}
+.sub #main div.friendsNumber p.on {position: relative; display: block; line-height: 60px; left: 30px;}
+.sub #main div.friendsNumber div {position: relative; height: 125px; overflow: hidden;}
+.sub #main div.friendsNumber div ul.friendsNumberLine {width: calc(116% - 2px); height: 100%; margin-left: -27px;}
+.sub #main div.friendsNumber div ul.friendsNumberLine > li { margin-top: 1px; width: 14.28%; box-sizing: border-box; float: left; height: 100%;}
+.sub #main div.friendsNumber div ul.friendsNumberLine > li > p {z-index: 10;}
+.sub #main div.friendsNumber div ul.friendsNumberLine > li:first-child > p { margin-top: 40px; left: 35px; }
+.sub #main div.friendsNumber div ul.friendsNumberLine > li:last-child > p { margin-top: 40px; right: 25px; }
+.sub #main div.friendsNumber div ul.friendsNumberLine > li:hover > p {position: absolute; display: block; width: 75px; height: 40px; background-color: #444444; color: white; font-size: 0.8rem; font-weight: 700; padding-left: 7px; margin-left: -12px; border-radius: 4px; opacity: 0.9;  }
+.sub #main div.friendsNumber div ul.friendsNumberLine > li:hover > p::before {content: ""; position: absolute; display: block; width: 0; height: 0; border-top: 7px solid #444444; border-right: 7px solid transparent; border-bottom: 7px solid transparent; border-left: 7px solid transparent; bottom: -13px; left: 33px; }
+.sub #main div.friendsNumber div ul.friendsNumberLine > li:hover > p > span::before {content: ""; display: inline-block; width: 7px; height: 7px; margin-right: 5px; border-radius: 10px; background-color: #2DADBC;}
+.sub #main div.friendsNumber div ul.friendsNumberLine > li:first-child > p::before {width: 0; height: 0; border-top: 7px solid transparent; border-right: 7px solid #444444; border-bottom: 7px solid transparent; border-left: 7px solid transparent; left: -13px; top: 12px; }
+.sub #main div.friendsNumber div ul.friendsNumberLine > li:last-child > p::before {position: absolute; width: 0; height: 0; border-top: 7px solid transparent; border-right: 7px solid transparent; border-bottom: 7px solid transparent; border-left: 7px solid #444444; left: 82px; top: 15px;}
+.sub #main div.friendsNumber div ul.friendsNumberLine > li > a {position: relative; display: block; width: 100%; height: 129%;}
+.sub #main div.friendsNumber div ul.friendsNumberLine > li > a::before{content: ""; position: absolute; width: 100%; border-bottom: 2px solid #2DADBC; top: 50%; margin-top: -1px;}
+.sub #main div.friendsNumber div ul.friendsNumberLine > li > a > span {position: absolute; width: 7px; height: 7px; top: 50%; left: 50%; border-radius: 10px; background-color: #2DADBC; transform: translate(-50%,-50%); transition: width .2s, height .2s; }
+.sub #main div.friendsNumber div ul.friendsNumberLine > li:hover > a span{width: 10px; height: 10px;}
+.sub #main div.friendsNumber div ul.friendsNumberLine > li:hover > a::after{content: ""; position: absolute; top: 50%; left: 50%; width: 18px; height: 18px; border-radius: 20px; background-color: rgba(46, 172, 188, 0.5); transform: translate(-50%,-50%);}
+.sub #main .notice-3 ul{border: 1px solid rgba(0, 0, 0, 0.05); height: 121px; margin-top: 20px;}
+.sub #main .notice-3 ul li{position: relative; float: left; width: 33.33%; box-sizing: border-box; height: 52px; text-align: center; top: 50%; transform: translate(0,-50%);}
+.sub #main .notice-3 ul li + li{border-left: 1px solid rgba(0, 0, 0, 0.05);}
+.sub #main .notice-3 ul li > a {display: block; width: 100%; height: 100%;}
+.sub #main .notice-3 ul li > a > h4 {font-size: 0.9rem; font-weight: 400; color: #444444;}
+.sub #main .notice-3 ul li > a > span{position: absolute; width: 70px; height: 28px; border-radius: 15px; background-color: #cccccc; left: 50%; bottom: 0; line-height: 28px; padding-right: 10px; box-sizing: border-box; transform: translate(-50%,0); text-align: right;color: white; font-weight: 900; }
+.sub #main .notice-3 ul li.off > a > span::before {content: ""; position: absolute; width: 20px; height: 20px; background-color: white; border-radius: 15px; left: 5px; top: 50%; transform: translate(0,-50%); }
+.sub #main .notice-3 ul li.on > a > span:last-of-type {display: none;}
+.sub #main .notice-3 ul li.on > a > span {background-color: #2DADBC; text-align: left; padding-left: 10px;}
+.sub #main .notice-3 ul li.on > a > span::after {content: ""; position: absolute; width: 20px; height: 20px; background-color: white; border-radius: 15px; right: 5px; top: 50%; transform: translate(0,-50%);}
+.sub #main .notice-4 {position: relative;}
+.sub #main .notice-4 ul {border: 1px solid rgba(0, 0, 0, 0.05); margin-top: 20px;}
+.sub #main .notice-4 ul li a {position: relative; margin-left: 20px; display: block; color: #6C7083; line-height: 49px;}
+.sub #main .notice-4 ul li.on a {color: black;}
+.sub #main .notice-4 ul li a i {opacity: 0; position: absolute; right: 20px; width: 30px; height: 30px; font-size: 1.5rem; top: 50%; transform: translate(0,-50%); transition: all .2s; }
+.sub #main .notice-4 ul li a i:last-child {opacity: 1;}
+.sub #main .notice-4 ul li.on a i:last-child {opacity: 0;}
+.sub #main .notice-4 ul li.on a i:first-child {opacity: 1; color: #2DADBC;}
+.sub #main .notice-4 ul li + li {border-top: 1px solid rgba(0, 0, 0, 0.05);}
+
+
+.sub.profile #main {background-color: white;}
+.sub.profile #main > div{position: relative; left: 60%; width: 940px; transform: translate(-50%,0); padding: 55px 55px; box-sizing: border-box;}
+.sub.profile #main > div > div.profile-title {border-bottom: 1px solid black;}
+.sub.profile #main > div > div.profile-title h2 {font-size: 2rem; font-weight: 400;}
+.sub.profile #main > div > div.profile-title p {font-size: 1rem; font-weight: 400; color: #666666; margin-bottom: 20px;}
+.sub.profile #main > div section:first-of-type {position: relative; padding: 0 !important; margin-top: 30px;}
+.sub.profile #main > div section:first-of-type {position: absolute; left: 55px; width: 570px; height: 647px;}
+.sub.profile #main > div section:last-of-type {position: absolute; right: 55px; border: 1px solid rgba(0, 0, 0, 0.25); width: 320px; height: 570px; border-radius: 0;}
+.sub.profile #main > div section:first-of-type div.setting {border-bottom: 1px solid rgba(0, 0, 0, 0.15); width: 100%;} 
+.sub.profile #main > div section:first-of-type div.setting:first-of-type{height: 250px;}
+.sub.profile #main > div section:first-of-type div.setting h3{display:block; font-size: 1.1rem;}
+.sub.profile #main > div section div.btn-box {display: block; height: 54px; bottom: 0; }
+
+.sub.profile .setting {position: relative;}
+.sub.profile .setting h3 {font-weight: 500;}
+.sub.profile .setting:first-child .profile-title {color: #666; font-size: 1rem; position: absolute; top: 44px; text-align: center; line-height: 36px;}
+.sub.profile #main > div section span.img-box {position: absolute; display: block; border: 1px solid rgba(0, 0, 0, 0.25); width: 346px; height: 36px; text-align: left; line-height: 36px; margin-left: 132px; box-sizing: border-box; padding-left: 10px; background-color: rgba(0, 0, 0, 0.03); top: 44px; color: #666666;}
+.sub.profile .setting:first-child input[type="file"] {position: absolute; right: 0px; top: 44px; width: 85px; height: 36px; box-sizing: border-box;}
+.sub.profile .setting:first-child .btn-file {position: absolute; right: 0px; top: 44px; border: 1px solid #dddddd; width: 85px; height: 36px; box-sizing: border-box; background-color: white; color: rgb(102,102,102); text-align: center; line-height: 36px; z-index: 10;}
+.sub.profile .setting:first-child .btn-file:hover {border: 1px solid rgb(102,102,102);}
+.sub.profile .setting:first-child .profile-size {position: absolute; color: rgb(153,153,153); font-size: 0.7rem; top: 85px; left: 130px;}
+.sub.profile .setting:first-child .profile-text {position: absolute; color: #666; font-size: 1rem; text-align: center; line-height: 36px; bottom: 80px;}
+.sub.profile .setting:first-child .profile-textarea {position: absolute; bottom: 0; right: 0;}
+textarea{width: 438px; height: 87px; resize: none; outline: none; border: 1px solid rgba(0, 0, 0, 0.25); margin-bottom: 20px; padding: 10px; box-sizing: border-box;}
+.sub.profile .btn-box a {display: block; position: relative; width: 90px; height: 36px; text-align: center; line-height: 36px; border-color: rgba(0,0,0,0.05); right: -479px; bottom: -20px; box-sizing: border-box; background-color: rgb(255,223,44);}
+.sub.profile .btn-box:last-of-type a {position: relative; top: 75px;}
+.sub.profile .btn-box a:hover {background-color: #e9cc28;}
+
+.sub.profile div.setting h3.option-h3 {margin-top: 20px;}
+.sub.profile div.option1 {height: 44px; box-sizing: border-box;}
+.sub.profile div.option1 span {position:absolute; width: 100px; line-height: 44px; color: #666666; font-size: 1rem;}
+.sub.profile div.option1 ul {position: absolute; height: 44px; margin-left: 100px; width: calc(100% - 100px); box-sizing: border-box; padding-left: 30px;}
+.sub.profile div.option1 ul li {float: left; width: 60px; line-height: 44px; }
+.sub.profile div.option1 label {position: absolute; font-size: 1rem; color: #666666; cursor: pointer;}
+.sub.profile div.option1 input[type='radio'],
+.sub.profile div.option1 input[type='radio']:checked {appearance: none; width: 0.9rem; height: 0.9rem; border-radius: 100%; cursor: pointer;}
+.sub.profile div.option1 input[type='radio'] { border: 1px solid rgba(0, 0, 0, 0.2); padding: 10px; margin-top: 10px;}
+.sub.profile div.option1 input[type='radio']:checked {position: relative; border: 1px solid #2DADBC;}
+.sub.profile div.option1 input[type='radio']:checked::before {content: ""; position: absolute; width: 0.6rem; height: 0.6rem; border-radius: 100%; background-color: #2DADBC; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+.sub.profile div.option2 { height: 90px;}
+
+
+.sub.profile .option2 .public-setting{position: absolute; color: #666666; font-size: 1rem; line-height: 45px;}
+.sub.profile .option2 ul li{position: relative; box-sizing: border-box; height: 45px;}
+.sub.profile .option2 ul li > a {display: block; height: 100%; text-align: center;}
+.sub.profile .option2 ul li > a > h4 {float: left; margin-left: 130px; line-height: 45px;  font-size: 0.9rem; font-weight: 400; color: #666666;}
+.sub.profile .option2 ul li > a > span{position: absolute; width: 70px; height: 28px; border-radius: 15px; background-color: #cccccc; left: 50%; bottom: 18%; line-height: 28px; padding-right: 10px; box-sizing: border-box; transform: translate(-50%,0); text-align: right;color: white; font-weight: 900; margin-left: -30px; transform: translate(-50%,0);}
+.sub.profile .option2 ul li.off > a > span::before {content: ""; position: absolute; width: 20px; height: 20px; background-color: white; border-radius: 15px; left: 5px; top: 50%; transform: translate(0,-50%); }
+.sub.profile .option2 ul li.on > a > span:last-of-type {display: none;}
+.sub.profile .option2 ul li.on > a > span {background-color: #2DADBC; text-align: left; padding-left: 10px;}
+.sub.profile .option2 ul li.on > a > span::after {content: ""; position: absolute; width: 20px; height: 20px; background-color: white; border-radius: 15px; right: 5px; top: 50%; transform: translate(0,-50%);}
+.sub.profile .option2 .country {position: absolute; width: 74px; height: 28px; right: 170px; bottom: 60px; border: 1px solid rgba(0, 0, 0, 0.2); text-align: center; line-height: 28px;}
+
+
+.sub.profile .profile-preview {margin-top: 30px;}
+.sub.profile .profile-preview .preview-header > img {width: 60px; height: 60px; float: left; margin-left: -10px; border-radius: 40%;}
+.sub.profile .profile-preview .preview-header .preview-header-name {width: 100px; margin-left: 60px; height: 60px; line-height: 20px;padding: 10px; box-sizing: border-box;}
+.sub.profile .profile-preview .preview-header .preview-header-name  > h3 { font-weight: 600;}
+.sub.profile .profile-preview .preview-header .preview-header-name  > span { color: #666; font-weight: 500;}
+.sub.profile .profile-preview .preview-header .preview-header-kakao {width: 100px; position: absolute; right: 0; top: 0; height: 60px; top: 30px; box-sizing: border-box; padding: 15px;}
+.sub.profile .profile-preview div#out {color: #666666;}
+.sub.profile .profile-preview .homeAndSosick {border-bottom: 1px solid rgba(0, 0, 0, 0.15); width: calc(100% + 60px); margin-left: -30px; height: 50px; padding-left: 20px; box-sizing: border-box;}
+.sub.profile .profile-preview .homeAndSosick a {display: block; width: calc(50% - 10px); float: left; box-sizing: border-box; line-height: 49px; box-sizing: border-box; text-align: center; color: #666666;}
+.sub.profile .profile-preview .homeAndSosick a.on { border-bottom: 1px solid black; font-weight: 700; color: black;}
+.sub.profile .profile-preview .home-img {position: absolute; left: 0; width: 318px; height: 388px; bottom: 0; opacity: 0.6;}
+
+
+.graph-circle {position: absolute; display: inline-block; vertical-align: middle; width: 50px; height: 50px; background-color: #e0e0e0; border-radius: 100%; overflow: hidden; text-align: center; font-size: 13px; right: 30px; top: 0;}
+.graph-circle > .indicator {position: absolute; left: 0; top: 0; width: 50%; height: 100%; background-color: #2DADBC; z-index: 5; transform-origin: right center; transform: rotate(0); transition: transform 0.3s;}
+.graph-circle > .cover {position: absolute; left: 0; top: 0; width: 50%; height: 100%; background-color: #e0e0e0; z-index: 6; transform-origin: right center;}
+.graph-circle.over50 > .cover {transform: rotate(180deg); background-color: #41e5c0;}
+.graph-circle > .text {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 15;}
+.graph-circle > .text > em {display: block; font-size: 1rem; font-weight: bold;}
+.graph-circle::after {content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 88%; height: 88%; background: #ffffff; border-radius: 100%; z-index: 10;}
+
+
+@media screen and (max-width: 1275px) {
+  body.sub main#main div.wrapper {left: 752px;}
+}
